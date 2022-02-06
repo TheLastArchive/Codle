@@ -14,7 +14,7 @@ gameLogic();
 function gameLogic() {
     let noOfGuesses = 0;
     let wordToGuess = getWord();
-    while (noOfGuesses < 7) {
+    while (noOfGuesses < 6) {
         let userGuess = getUserInput().toLowerCase();
         if (invalidInput(userGuess)) {
             console.log("Invalid input");
@@ -23,10 +23,12 @@ function gameLogic() {
         noOfGuesses++;
         if (isAnswerCorrect(wordToGuess, userGuess, noOfGuesses)) {
             console.log((noOfGuesses) + "/6\nThe word was " + wordToGuess.toUpperCase());
+            displayGrid();
             return;
         }
     }
     console.log("X/6\nThe word was " + wordToGuess.toUpperCase());
+    displayGrid();
 }
 
 function isAnswerCorrect(wordToGuess, userGuess, noOfGuesses) {
@@ -45,14 +47,14 @@ function isAnswerCorrect(wordToGuess, userGuess, noOfGuesses) {
         }
 
     }
-    console.log(answerString);
     logUserGuess(noOfGuesses, answerString);
+    console.log(answerString);
     return correctLetters === 5;
 }
 
-function logUserGuess(noOfGuesses, userGuess) {
-    for (let i = 0; i++; i <= 5) {
-        loggedGuesses[noOfGuesses][i] = userGuess.charAt(i);
+function logUserGuess(noOfGuesses, answerString) {
+    for (let i = 0; i <= 5; i++) {
+        loggedGuesses[noOfGuesses - 1][i] = answerString.charAt(i);
     }
 }
 
@@ -75,4 +77,16 @@ function invalidInput(userGuess) {
 function getUserInput() {
     const prompt = ps();
     return prompt();
+}
+
+function displayGrid() {
+    for (var row of loggedGuesses) {
+        if (row[0] === "") 
+            return;
+        let rowString = "";
+        for (var char of row) {
+            rowString += char + " ";
+        }
+        console.log(rowString);
+    }
 }
