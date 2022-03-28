@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Codle Login</title>
+    <link rel="stylesheet" href="css/layout.css">
+</head>
+
+<body>
+    <h1 id="main_title">CODLE</h1>
+    <form id="login_form" method="post" action="/login" enctype="application/x-www-form-urlencoded">
+        <label for="username"></label>
+        <input name="username" id="username" type="text" placeholder="Username" autofocus required>
+
+        <label for="password"></label>
+        <input name="password" id="password" type="password" placeholder="Password">
+
+        <input id="submit" type="submit" value="Login"/>
+    </form>
+
+    <form id="register_form" method="post" action="/register" enctype="application/x-www-form-urlencoded">
+        <label for="username"></label>
+        <input name="username" id="username" type="text" placeholder="Username" autofocus required>
+
+        <label for="password"></label>
+        <input name="password" id="password" type="password" placeholder="Password">
+
+        <input id="submit" type="submit" value="Register"/>
+    </form>
+</body>
+
+</html>

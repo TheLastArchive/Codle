@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en"
+xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+    xmlns:th="http://www.thymeleaf.org"
+    layout:decorate="~{/layout.html}">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/user.css">
+    <title>Results Page</title>
+</head>
+<body>
+<div id="user_stats">
+    <table id="stats_table">
+        <thead>
+            <th>Games Played</th>
+            <th>Longest Streak</th>
+            <th>Current Streak</th>
+        </thead>
+        <tbody>
+            <td id="games_played" name="games_played" th:text="${gamesPlayed}"></td>
+            <td id="longest_streak" name="longest_streak" th:text="${longestStreak}"></td>
+            <td id="current_streak" name="current_streak" th:text="${currentStreak}"></td>
+        </tbody>
+    </table>
+</div>
+<div id="user_results"></div>
+</body>
+</html>

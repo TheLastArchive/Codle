@@ -1,0 +1,61 @@
+* {
+    font-family: Consolas, monaco, monospace;
+    color: white;
+}
+
+body {
+    background-color: #1b1c1c
+}
+
+.game_screen {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    align-items: center;
+}
+
+.game_board {
+    display: grid;
+    box-sizing: border-box;
+}
+
+.board_row {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 5px;
+    padding: 5px;
+
+}
+
+.tile {
+    width: 60px;
+    height: 60px;
+    border: 1px solid darkgrey;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-weight: bold;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+#endgame_overlay {
+    display: flex;
+    position: relative;
+    margin: 300px top;
+    width: 70px;
+    height: 50px;
+    justify-content: center;
+    background-color: rgb(83, 131, 78);
+}
+
+#share_button {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    background-color: rgb(83, 131, 78);
+    border: none;
+}

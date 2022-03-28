@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en"
+    xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+    xmlns:th="http://www.thymeleaf.org"
+    layout:decorate="~{/layout.html}">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+    <script src="js/codle.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+<div layout:fragment="contents" class="game_screen">
+    <div class="game_board" id="game_board">
+        <div class="board_row" th:each="row : ${#numbers.sequence(1, 6, 1)}" th:id="'board_row_' + ${row}">
+            <div class="tile" th:each="index : ${#numbers.sequence(1, 5, 1)}" 
+            th:id = "'row_' + ${row} + '_index_' + ${index}"></div>
+        </div>
+    </div>
+    <div id="endgame_overlay" style="display:none">
+        <button id="share_button">SHARE</button>
+    </div>
+</div>
+</body>
+</html>

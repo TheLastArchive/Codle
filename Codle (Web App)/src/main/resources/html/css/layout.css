@@ -1,0 +1,29 @@
+* {
+    font-family: Consolas, monaco, monospace;
+}
+
+body {
+    background-color: #1b1c1c
+}
+
+#main_title {
+    text-align: center;
+    color: white;
+    font-size: 50px;
+}
+
+#login_form {
+    width: 100px;
+    height: 100px;
+    padding: 15px 30px;
+    text-align: center;
+    position: relative;
+}
+
+#register_form {
+    width: 100px;
+    height: 100px;
+    padding: 15px 30px;
+    text-align: center;
+    position: relative;
+}
