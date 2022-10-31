@@ -14,4 +14,4 @@ Inspired by the web based game developed by Josh Wardle.
 Play Wordle here: https://www.powerlanguage.co.uk/wordle/
 
 
-Please note that since this is a work in progress, it will most likely not run until the Docker file is set up and working correctly. 
+Please note that since this is a work in progress, it will most likely not run until the Docker file is set up and working correctly. This project is not intended for public use but instead made for fun.
