@@ -11,7 +11,9 @@ import java.time.ZoneOffset;
 public class LoginController {
 
     UsersDataAccess dataAccess = new UsersDataAccess();
-
+    
+    //Base64 is merely a placeholder and not intended for real world use. Base64 is NOT effective encryption
+    
     public void register(Context context) {
         String username = context.formParam("username");
         String password = context.formParam("password");
